@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --title-color: #403e3f;
+  --main-background-color: #d7d6d4;
+  --secondary-background-color: #cacaca;
+  --empty-progress-box: #b5b5b5;
+  --text-color: #545454;
+  --second-text-color: #4b4b4b;
+  --job-name-color: #6f6e6c;
+  --lines-color: #c3c3c3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+main.container {
+  margin: 0px auto;
+  width: 1000px;
+  display: flex;
+  background: #d7d6d4;
+  gap: 15px;
+}
+.container .right-side {
+  flex: 3;
+}
+.container .left-side {
+  flex: 1.2;
+  border: 1px solid red;
+  padding-inline: 40px 20px;
+}
+.profile-pic {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+.profile-pic img {
+  width: 80%;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0px 10px 0px #424141;
+  transform: translateX(-10px);
+}
+.title-blue-bold {
+  color: var(--title-color);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+  display: inline-block;
+}
+.info-text-style {
+  color: var(--title-color);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.info-text-style i {
+  font-size: 22px;
+  margin-right: 8px;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.title .title-blue-bold {
+  margin-left: 5px;
+}
+.left-side .information .awards h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  padding: 3px 30px;
+  border: 2px solid var(--title-color);
+  display: inline-block;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: var(--title-color);
+  font-weight: 800;
+}
+.left-side .information .awards .awards-title h4 {
+  color: var(--second-text-color);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+}
+.left-side .information .awards .awards-title h4 + span {
+  color: var(--second-text-color);
+  font-style: italic;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+.left-side .information .awards .awards-title p {
+  color: var(--text-color);
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.left-side .information .awards .awards-title p + span {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--title-color);
+}
+.left-side .information .skills .title {
+  color: var(--title-color);
+  margin-block: 25px 0px;
+}
+.left-side .information .skills .my-skills {
+  margin-block: 15px;
+}
+.left-side .information .skills .my-skills p {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--title-color);
+  margin: 0;
+}
+.left-side .information .skills .my-skills span {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  margin-right: 3px;
+  background: var(--empty-progress-box);
+}
+.left-side .information .skills .my-skills span.colored-skills {
+  background: var(--title-color);
+}
