@@ -32,29 +32,39 @@ main.container {
   margin: 0px auto;
   display: flex;
   background: #d7d6d4;
-  gap: 0.94em;
+  gap: 1.85em;
   border: 1.25em solid var(--title-color);
   padding: 2.5em calc(1em * (30 / 16));
-  /* width: 100vw; */
 }
 @media (max-width: 720px) {
   body {
-    font-size: 65%;
+    font-size: 75%;
   }
   main.container {
-    /* background: red; */
     flex-direction: column;
+    gap: 0.9em;
   }
+  .container .right-side .my_data {
+    justify-content: center;
+  }
+  .style-line.style-line.line-1,
+  .style-line.style-line.line-2,
+  .style-line.style-line.line-3 {
+    display: none;
+  }
+  .container .right-side .my_data .name_job_style {
+    display: none;
+  }
+  .right-side .about_me div:first-of-type {
+    justify-content: center;
+}
 }
 .container .left-side {
   flex: 1;
-  /* border: 1px solid red; */
-  /* padding-inline: 40px 20px; */
 }
 .profile-pic {
   width: 100%;
   text-align: center;
-  /* padding-top: 30px; */
 }
 .profile-pic img {
   width: 80%;
@@ -189,8 +199,6 @@ main.container {
 
 .container .right-side {
   flex: 4;
-  border: 0.125em solid red;
-  padding-inline: 1.25em;
 }
 .container .right-side .my_data {
   display: flex;
@@ -200,10 +208,16 @@ main.container {
 }
 .right-side .my_data .name_job h1 {
   text-transform: uppercase;
-  margin: 0;
+  margin: -0.15em 0;
   font-weight: 900;
-  font-size: 4em;
+  font-size: 2.5em;
   color: var(--title-color);
+}
+.right-side .my_data .name_job h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 8px;
 }
 .right-side .my_data .name_job p {
   margin: 0;
@@ -211,4 +225,113 @@ main.container {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: -1px;
+}
+.right-side .my_data .name_job_style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-block: 10px;
+  width: 100%;
+}
+.style-line {
+  height: 5px;
+  border-radius: 5px 0 0 5px;
+  background: var(--lines-color);
+  display: inline-block;
+  margin-right: -2em;
+}
+.style-line.line-1 {
+  width: 95%;
+  margin-bottom: 1.5em;
+}
+.style-line.line-2 {
+  width: 100%;
+  margin-bottom: -1em;
+}
+.right-side .about_me {
+  display: flex;
+  margin-top: 1.5em;
+  margin-left: 0.4em;
+  flex-direction: column;
+}
+.right-side .about_me div:first-of-type {
+  display: flex;
+}
+.right-side .about_me .about-me-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.right-side .about_me .about-me-title i {
+  margin-right: 0.5em;
+}
+.right-side .about_me .about-me-title h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+.style-line.line-3 {
+  width: 400%;
+  margin-top: 0.3em;
+}
+.right-side .about_me p {
+  line-height: 1.6;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: var(--second-text-color);
+}
+.right-side .education {
+  background: var(--secondary-background-color);
+  padding: 0.025em 2em;
+  margin-top: 0.5em;
+  border-radius: 1.65em;
+}
+.right-side .education .education-title i {
+  margin-right: 1.2em;
+  font-size: 1.5em;
+  color: var(--title-color);
+}
+.right-side .education .education-title {
+  margin-bottom: 1.5em;
+}
+.education-place-data-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.education-place-data-date .date {
+  padding-right: 2em;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+.education-place h4 {
+  font-size: 1.5em;
+  color: var(--title-color);
+  text-transform: capitalize;
+  margin-bottom: -0.2em;
+}
+.education-place h4 + span {
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 0.7em;
+}
+.education-place p {
+  line-height: 1.6;
+  color: var(--second-text-color);
+  font-weight: 500;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1.5em;
+  padding: 0;
+}
+.footer p {
+  padding: 1em 2em;
+  border-radius: 5em;
+  background: var(--title-color);
+  color: #fff;
 }
